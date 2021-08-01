@@ -1,0 +1,98 @@
+@media screen and (min-width: 401px){
+    .card {
+        background-color: #333;
+        display: flex;
+        flex-direction: row;
+        max-width: 75%;
+    }
+}
+@media screen and (max-width: 400px){
+    .card {
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        max-width: 98%;
+    }
+}
+
+body {
+    background-color: #333;
+    color: lightgreen;
+    font-size: 1.2em;
+}
+
+#body-header h1 {
+    text-align: center;
+}
+
+#body-footer p {
+    display: inline-block;
+}
+
+#trips {
+    max-width: 96%;
+    text-align: center;
+    border: white 1px solid;
+    width: 97%;
+    border-radius: 5%;
+    padding: 3px;
+}
+
+#add-btn:active {
+    border: 2px lightgreen;
+    color: purple;
+    background-color: seagreen;
+}
+
+#add-btn {
+    border: 2px gray groove;
+    border-radius: 5%;
+    background-color: rgba(18, 18, 122, 0.383);
+    color: white;
+    text-transform: uppercase;
+    padding: 3px;
+}
+
+.rm-btn:hover,#add-btn:hover,#savetripcard:hover ,#donotsave:hover {
+    cursor: pointer;
+    background-color: darkmagenta;
+    color: white;
+}
+
+#trips-main h3 {
+    display: inline-block;
+}
+
+#trips-counter {
+    display: block;
+    margin: 9px;
+}
+
+#added-trips .frst-half{
+    display: inline-block;
+    grid-area: lefty;
+    max-width: 99%;
+}
+
+#added-trips .scnd-half {
+    display: inline-block;
+    grid-area: righty;
+    max-width: 99%;
+}
+
+#in-data {
+    display: none;
+    max-width: max-content;
+}
+
+.card {
+    border: 3px gray solid;
+    padding: 4px;
+    margin: 3px;
+}
+
+.rm-btn {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}

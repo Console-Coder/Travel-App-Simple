@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Travel App</title>
+</head>
+
+<body>
+    <header id="body-header">
+        <h1>Your Travel App, always be ready!</h1>
+    </header>
+    <main id="body-main">
+        <div id="trips-main">
+            <h3>Your Trips</h3>
+            <button id="add-btn" type="button">Add</button>
+            <div id="in-data" style="margin: 9px;">
+                <form>
+                    <fieldset>
+                        <legend>Enter your trip details</legend>
+                        <label>Your destination</label>: <input type="text" id="dest">
+                        <label><br><br>You'll travel at</label>: <input type="date" id="travel-date">
+                        <br><br>
+                        <button type="button" id="savetripcard">Save</button>
+                        <button type="button" id="donotsave">Cancel</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div id="trips">
+            <p id="trips-counter">
+                You've <span id="ntrip">no</span> trips currently
+            </p>
+            <div id="added-trips">
+            </div>
+        </div>
+    </main>
+    <footer id="body-footer">
+        <hr>
+        <p>&copy;Gamal Ibrahim</p>
+        <p>&copy;Geonames</p>
+        <p>&copy;Pixabay</p>
+        <p>&copy;Weatherbit</p>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('../service-worker.js').then(registration => {
+                    console.log('SW registered: ', registration);
+                }).catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
